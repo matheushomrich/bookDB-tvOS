@@ -12,6 +12,8 @@
 		4EC6BA3227FB768400BD48AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3027FB768400BD48AC /* Main.storyboard */; };
 		4EC6BA3427FB768800BD48AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3327FB768800BD48AC /* Assets.xcassets */; };
 		4EC6BA3727FB768800BD48AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3527FB768800BD48AC /* LaunchScreen.storyboard */; };
+		F4AADC1E27FCB6970093D81E /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AADC1D27FCB6970093D81E /* Details.storyboard */; };
+		F4AADC2027FCBA2B0093D81E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AADC1F27FCBA2B0093D81E /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		4EC6BA3127FB768400BD48AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EC6BA3327FB768800BD48AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC6BA3627FB768800BD48AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4AADC1D27FCB6970093D81E /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
+		F4AADC1F27FCBA2B0093D81E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		4EC6BA2B27FB768400BD48AC /* BookDB-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				F4AADC2127FCD31C0093D81E /* Details */,
 				4EC6BA2C27FB768400BD48AC /* AppDelegate.swift */,
 				4EC6BA2E27FB768400BD48AC /* ViewController.swift */,
 				4EC6BA3027FB768400BD48AC /* Main.storyboard */,
@@ -60,6 +65,15 @@
 				4EC6BA3527FB768800BD48AC /* LaunchScreen.storyboard */,
 			);
 			path = "BookDB-tvOS";
+			sourceTree = "<group>";
+		};
+		F4AADC2127FCD31C0093D81E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F4AADC1D27FCB6970093D81E /* Details.storyboard */,
+				F4AADC1F27FCBA2B0093D81E /* DetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +137,7 @@
 				4EC6BA3727FB768800BD48AC /* LaunchScreen.storyboard in Resources */,
 				4EC6BA3427FB768800BD48AC /* Assets.xcassets in Resources */,
 				4EC6BA3227FB768400BD48AC /* Main.storyboard in Resources */,
+				F4AADC1E27FCB6970093D81E /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +150,7 @@
 			files = (
 				4EC6BA2F27FB768400BD48AC /* ViewController.swift in Sources */,
 				4EC6BA2D27FB768400BD48AC /* AppDelegate.swift in Sources */,
+				F4AADC2027FCBA2B0093D81E /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 478594C4R9;
+				DEVELOPMENT_TEAM = 8JAU65C453;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +322,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 478594C4R9;
+				DEVELOPMENT_TEAM = 8JAU65C453;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
