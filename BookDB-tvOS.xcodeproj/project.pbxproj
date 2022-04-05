@@ -12,6 +12,8 @@
 		4EC6BA3227FB768400BD48AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3027FB768400BD48AC /* Main.storyboard */; };
 		4EC6BA3427FB768800BD48AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3327FB768800BD48AC /* Assets.xcassets */; };
 		4EC6BA3727FB768800BD48AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3527FB768800BD48AC /* LaunchScreen.storyboard */; };
+		5D360B0627FCB75600460DBC /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D360B0527FCB75600460DBC /* Store.storyboard */; };
+		5D360B0827FCB76200460DBC /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D360B0727FCB76200460DBC /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		4EC6BA3127FB768400BD48AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EC6BA3327FB768800BD48AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC6BA3627FB768800BD48AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D360B0527FCB75600460DBC /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		5D360B0727FCB76200460DBC /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		4EC6BA2B27FB768400BD48AC /* BookDB-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				5D360B0127FCB6EC00460DBC /* New Group */,
 				4EC6BA2C27FB768400BD48AC /* AppDelegate.swift */,
 				4EC6BA2E27FB768400BD48AC /* ViewController.swift */,
 				4EC6BA3027FB768400BD48AC /* Main.storyboard */,
@@ -60,6 +65,39 @@
 				4EC6BA3527FB768800BD48AC /* LaunchScreen.storyboard */,
 			);
 			path = "BookDB-tvOS";
+			sourceTree = "<group>";
+		};
+		5D360B0127FCB6EC00460DBC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				5D360B0427FCB74700460DBC /* Model */,
+				5D360B0327FCB74100460DBC /* Controller */,
+				5D360B0227FCB73400460DBC /* View */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5D360B0227FCB73400460DBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D360B0527FCB75600460DBC /* Store.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D360B0327FCB74100460DBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D360B0727FCB76200460DBC /* StoreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D360B0427FCB74700460DBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D360B0627FCB75600460DBC /* Store.storyboard in Resources */,
 				4EC6BA3727FB768800BD48AC /* LaunchScreen.storyboard in Resources */,
 				4EC6BA3427FB768800BD48AC /* Assets.xcassets in Resources */,
 				4EC6BA3227FB768400BD48AC /* Main.storyboard in Resources */,
@@ -135,6 +174,7 @@
 			files = (
 				4EC6BA2F27FB768400BD48AC /* ViewController.swift in Sources */,
 				4EC6BA2D27FB768400BD48AC /* AppDelegate.swift in Sources */,
+				5D360B0827FCB76200460DBC /* StoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
