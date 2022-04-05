@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgj-up-wSf">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Library-->
+        <scene sceneID="9lE-WX-96o">
+            <objects>
+                <viewController storyboardIdentifier="library-vc" title="Library" id="Xgj-up-wSf" customClass="LibraryViewController" customModule="BookDB_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aTn-mJ-5lt"/>
+                        <viewControllerLayoutGuide type="bottom" id="BrO-eL-FPV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oo6-ab-TCE">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TtW-XS-EL1">
+                                <rect key="frame" x="0.0" y="50" width="1920" height="1030"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="60" minimumInteritemSpacing="10" id="XYP-r7-0It">
+                                    <size key="itemSize" width="224" height="335"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="60" minY="40" maxX="0.0" maxY="40"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="library-cell" id="BmI-3q-nef" customClass="LibraryCollectionViewCell" customModule="BookDB_tvOS" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="40" width="448" height="358"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Va6-ME-W56">
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="358"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-GN-81p">
+                                                    <rect key="frame" x="0.0" y="1.5" width="448" height="308.5"/>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <imageReference key="image" image="book" catalog="system" symbolScale="default"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="god-r1-L8a">
+                                                    <rect key="frame" x="0.0" y="312" width="448" height="46"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="god-r1-L8a" firstAttribute="top" secondItem="tLP-GN-81p" secondAttribute="bottom" constant="1" id="GHt-67-gfl"/>
+                                                <constraint firstItem="tLP-GN-81p" firstAttribute="top" secondItem="Va6-ME-W56" secondAttribute="top" id="Opl-8i-Gu7"/>
+                                                <constraint firstAttribute="trailing" secondItem="tLP-GN-81p" secondAttribute="trailing" id="QU8-5Q-wdK"/>
+                                                <constraint firstItem="tLP-GN-81p" firstAttribute="leading" secondItem="Va6-ME-W56" secondAttribute="leading" id="RZH-Od-KpQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="god-r1-L8a" secondAttribute="trailing" id="SvW-4z-dfo"/>
+                                                <constraint firstItem="god-r1-L8a" firstAttribute="leading" secondItem="Va6-ME-W56" secondAttribute="leading" id="hhG-7m-5yb"/>
+                                                <constraint firstAttribute="bottom" secondItem="god-r1-L8a" secondAttribute="bottom" id="ypw-J2-Wd6"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="448" height="358"/>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="tLP-GN-81p" id="bpf-Ja-2LK"/>
+                                            <outlet property="titleLabel" destination="god-r1-L8a" id="Aob-kF-WS2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rbh-h3-eDf"/>
+                        <constraints>
+                            <constraint firstItem="TtW-XS-EL1" firstAttribute="leading" secondItem="Oo6-ab-TCE" secondAttribute="leading" id="0jD-Gz-3DA"/>
+                            <constraint firstAttribute="bottom" secondItem="TtW-XS-EL1" secondAttribute="bottom" id="5Rz-NW-gyk"/>
+                            <constraint firstItem="TtW-XS-EL1" firstAttribute="top" secondItem="Oo6-ab-TCE" secondAttribute="top" constant="50" id="O0N-Zg-Rez"/>
+                            <constraint firstAttribute="trailing" secondItem="TtW-XS-EL1" secondAttribute="trailing" id="V07-bB-e7Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="libraryCollectionView" destination="TtW-XS-EL1" id="Ss1-AQ-jMq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uX-ET-Cqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="-5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="100"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
