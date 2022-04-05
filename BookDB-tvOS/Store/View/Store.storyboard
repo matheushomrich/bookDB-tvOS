@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgj-up-wSf">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Store-->
+        <scene sceneID="9lE-WX-96o">
+            <objects>
+                <viewController id="Xgj-up-wSf" customClass="StoreViewController" customModule="BookDB_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aTn-mJ-5lt"/>
+                        <viewControllerLayoutGuide type="bottom" id="BrO-eL-FPV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oo6-ab-TCE">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2or-XW-tLp">
+                                <rect key="frame" x="80" y="276" width="460" height="690"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="460" id="CLY-QV-uPV"/>
+                                    <constraint firstAttribute="height" constant="690" id="NVw-mi-CX7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bil-bR-GC5">
+                                <rect key="frame" x="680" y="856" width="440" height="110"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="7ov-5P-fhZ"/>
+                                    <constraint firstAttribute="width" constant="440" id="QXe-Sk-CCx"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="COMPRAR | R$ 39,90">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="32"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-K3-Vu1">
+                                <rect key="frame" x="1152" y="856" width="318" height="110"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="2d3-jT-Sgh"/>
+                                    <constraint firstAttribute="height" constant="110" id="W9D-LN-xLg"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="QUERO LER">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="32"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gL-Gf-7g5">
+                                <rect key="frame" x="1502" y="856" width="294" height="110"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="84Y-J4-hIl"/>
+                                    <constraint firstAttribute="width" constant="294" id="c3E-WJ-RdU"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AMOSTRA">
+                                    <imageReference key="image" image="magazine.fill" catalog="system" symbolScale="small"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="32"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhS-kg-TzH">
+                                <rect key="frame" x="596" y="276" width="92" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rbh-h3-eDf"/>
+                        <constraints>
+                            <constraint firstItem="2or-XW-tLp" firstAttribute="leading" secondItem="Rbh-h3-eDf" secondAttribute="leading" id="CZj-kv-RZW"/>
+                            <constraint firstItem="mhS-kg-TzH" firstAttribute="top" secondItem="2or-XW-tLp" secondAttribute="top" id="Gdm-Ld-Ldm"/>
+                            <constraint firstItem="0gL-Gf-7g5" firstAttribute="leading" secondItem="hkg-K3-Vu1" secondAttribute="trailing" constant="32" id="TvW-qf-ggJ"/>
+                            <constraint firstItem="hkg-K3-Vu1" firstAttribute="centerY" secondItem="bil-bR-GC5" secondAttribute="centerY" id="VYR-Ed-xJD"/>
+                            <constraint firstItem="hkg-K3-Vu1" firstAttribute="leading" secondItem="bil-bR-GC5" secondAttribute="trailing" constant="32" id="Y90-6T-Fg3"/>
+                            <constraint firstItem="bil-bR-GC5" firstAttribute="leading" secondItem="2or-XW-tLp" secondAttribute="trailing" constant="140" id="blx-kT-slN"/>
+                            <constraint firstItem="2or-XW-tLp" firstAttribute="top" secondItem="Rbh-h3-eDf" secondAttribute="top" constant="119" id="f7l-sL-jIc"/>
+                            <constraint firstItem="bil-bR-GC5" firstAttribute="bottom" secondItem="2or-XW-tLp" secondAttribute="bottom" id="geu-DG-5Zp"/>
+                            <constraint firstItem="mhS-kg-TzH" firstAttribute="leading" secondItem="2or-XW-tLp" secondAttribute="trailing" constant="56" id="yhE-NN-ZDI"/>
+                            <constraint firstItem="0gL-Gf-7g5" firstAttribute="centerY" secondItem="hkg-K3-Vu1" secondAttribute="centerY" id="zmM-uQ-yYB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Store" image="cart" catalog="system" id="5GS-nz-quF" userLabel="Store"/>
+                    <simulatedTabBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bookImageView" destination="2or-XW-tLp" id="9yr-Jy-ml1"/>
+                        <outlet property="buyButton" destination="bil-bR-GC5" id="hVu-Sa-h8y"/>
+                        <outlet property="readListButton" destination="hkg-K3-Vu1" id="87f-se-Qaw"/>
+                        <outlet property="sampleButton" destination="0gL-Gf-7g5" id="Ipg-sq-SXE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uX-ET-Cqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="-5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="101"/>
+        <image name="magazine.fill" catalog="system" width="110" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
