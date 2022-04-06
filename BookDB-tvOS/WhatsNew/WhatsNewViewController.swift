@@ -14,7 +14,6 @@ struct Book {
 }
 
 struct New {
-    let image: UIImage
     let name: String
 }
 
@@ -31,8 +30,8 @@ class WhatsNewViewController: UIViewController {
     let booksIdentifier = "book-cell"
     
     
-    let book1 = Book(image: UIImage(systemName: "book")!, name: "book")
-    let new1 = New(image: UIImage(systemName: "newspaper")!, name: "newspaper")
+    let book1 = Book(image: UIImage(named: "a")!, name: "book")
+    let new1 = New(name: "Soon")
     
     var books: [Book] = []
     var news: [New] = []
@@ -43,7 +42,6 @@ class WhatsNewViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionViews()
-        
         bookImage.image = UIImage(systemName: "book")
         profileImage.image = UIImage(named: "a")
         profileImage.circleImage()
@@ -51,19 +49,19 @@ class WhatsNewViewController: UIViewController {
         books.append(book1)
         news.append(new1)
         
-//        view.addLayoutGuide(focusGuide)
-//
-//        NSLayoutConstraint.activate([
-//            focusGuide.bottomAnchor.constraint(equalTo: newsCollectionView.topAnchor),
-//            focusGuide.leftAnchor.constraint(equalTo: newsCollectionView.leftAnchor),
-//            focusGuide.widthAnchor.constraint(equalTo: newsCollectionView.widthAnchor),
-//            focusGuide.heightAnchor.constraint(equalToConstant: 50),
-//
-//            focusGuide.bottomAnchor.constraint(equalTo: booksCollectionView.topAnchor),
-//            focusGuide.leftAnchor.constraint(equalTo: booksCollectionView.leftAnchor),
-//            focusGuide.widthAnchor.constraint(equalTo: booksCollectionView.widthAnchor),
-//            focusGuide.heightAnchor.constraint(equalToConstant: 50)
-//        ])
+        //        view.addLayoutGuide(focusGuide)
+        //
+        //        NSLayoutConstraint.activate([
+        //            focusGuide.bottomAnchor.constraint(equalTo: newsCollectionView.topAnchor),
+        //            focusGuide.leftAnchor.constraint(equalTo: newsCollectionView.leftAnchor),
+        //            focusGuide.widthAnchor.constraint(equalTo: newsCollectionView.widthAnchor),
+        //            focusGuide.heightAnchor.constraint(equalToConstant: 50),
+        //
+        //            focusGuide.bottomAnchor.constraint(equalTo: booksCollectionView.topAnchor),
+        //            focusGuide.leftAnchor.constraint(equalTo: booksCollectionView.leftAnchor),
+        //            focusGuide.widthAnchor.constraint(equalTo: booksCollectionView.widthAnchor),
+        //            focusGuide.heightAnchor.constraint(equalToConstant: 50)
+        //        ])
         
     }
     
@@ -91,8 +89,12 @@ extension WhatsNewViewController: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return books.count
+        if collectionView == self.newsCollectionView {
+            return news.count
+        } else {
+            return books.count
+            
+        }
     }
     
     
@@ -103,7 +105,6 @@ extension WhatsNewViewController: UICollectionViewDataSource {
             
             let new = news[indexPath.row]
             
-            cell.newsImageView.image = UIImage(named: new.name)
             cell.newsLabel.text = new.name
             
             return cell
@@ -118,15 +119,6 @@ extension WhatsNewViewController: UICollectionViewDataSource {
         }
         
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//
-//        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader{
-//            sectionHeader.sectionHeaderlabel.text = "Section \(indexPath.section)"
-//            return sectionHeader
-//        }
-//        return UICollectionReusableView()
-//    }
     
 }
 
@@ -164,9 +156,28 @@ extension WhatsNewViewController: UICollectionViewDataSource {
 extension WhatsNewViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 350, height: 250)
+        if indexPath.row == 0 {
+            return CGSize(width: 660, height: 400)
+        } else {
+            return CGSize(width: 200, height: 300)
+        }
+        
+        
     }
     
 }
 
+struct Collection {
+    let title: String
+}
 
+extension Collection {
+    static var collections: [Collection] {
+        [
+            Collection(title: "Em breve"),
+            Collection(title: "Leia antes de assistir"),
+            Collection(title: "Livros premiados"),
+            Collection(title: "Livros ruins")
+        ]
+    }
+}

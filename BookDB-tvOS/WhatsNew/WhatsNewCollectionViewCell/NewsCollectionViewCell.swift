@@ -42,8 +42,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
     
     private func configureInitialAppearance() {
         self.newsLabel.transform = CGAffineTransform(scaleX: .zero, y: .zero)
-        newsImageView.layer.cornerRadius = 10
-        newsImageView.clipsToBounds = true
+        //newsImageView.layer.cornerRadius = 10
+        //newsImageView.clipsToBounds = true
     }
 
     

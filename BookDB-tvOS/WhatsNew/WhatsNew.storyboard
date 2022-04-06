@@ -11,7 +11,7 @@
         <!--Whats New View Controller-->
         <scene sceneID="9lE-WX-96o">
             <objects>
-                <viewController id="Xgj-up-wSf" customClass="WhatsNewViewController" customModule="BookDB_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xgj-up-wSf" customClass="WhatsNewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aTn-mJ-5lt"/>
                         <viewControllerLayoutGuide type="bottom" id="BrO-eL-FPV"/>
@@ -34,7 +34,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="news-cell" id="g0j-0M-hdm" customClass="NewsCollectionViewCell" customModule="BookDB_tvOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="news-cell" id="g0j-0M-hdm" customClass="NewsCollectionViewCell">
                                         <rect key="frame" x="-95" y="0.0" width="850" height="520"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rs2-iP-tde">
@@ -44,7 +44,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-Dm-GLe">
                                                     <rect key="frame" x="60" y="60" width="690" height="400"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="GDn-5a-sCE">
@@ -52,6 +52,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="WYw-Dm-GLe" firstAttribute="leading" secondItem="GDn-5a-sCE" secondAttribute="leading" constant="60" id="CLR-Ko-juV"/>
                                                 <constraint firstItem="GDn-5a-sCE" firstAttribute="trailing" secondItem="WYw-Dm-GLe" secondAttribute="trailing" constant="100" id="MmJ-yo-w2k"/>
@@ -61,17 +62,24 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="850" height="520"/>
                                         <connections>
-                                            <outlet property="newsImageView" destination="GDn-5a-sCE" id="Kdc-5M-DYo"/>
-                                            <outlet property="newsLabel" destination="WYw-Dm-GLe" id="qy0-6x-nWz"/>
+                                            <outlet property="newsImageView" destination="GDn-5a-sCE" id="CrE-p0-wDZ"/>
+                                            <outlet property="newsLabel" destination="WYw-Dm-GLe" id="7w2-n7-h3M"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-RJ-aw6">
-                                <rect key="frame" x="80" y="60" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-RJ-aw6">
+                                <rect key="frame" x="80" y="61.5" width="100" height="97.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="VmD-5G-71R"/>
                                     <constraint firstAttribute="width" secondItem="zAc-RJ-aw6" secondAttribute="height" multiplier="1:1" id="vuM-49-cDD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-3S-aiO">
+                                <rect key="frame" x="1740" y="60" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aCg-3S-aiO" secondAttribute="height" multiplier="1:1" id="SiK-LS-kUP"/>
+                                    <constraint firstAttribute="width" constant="100" id="lqh-p6-fGc"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4d5-g1-d8K">
@@ -88,7 +96,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="book-cell" id="xzT-ya-LvE" customClass="BooksCollectionViewCell" customModule="BookDB_tvOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="book-cell" id="xzT-ya-LvE" customClass="BooksCollectionViewCell">
                                         <rect key="frame" x="36" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eTu-34-I6w">
@@ -101,18 +109,22 @@
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookImageView" destination="nTB-gT-yPO" id="vZW-eJ-hvy"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-3S-aiO">
-                                <rect key="frame" x="1740" y="60" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="aCg-3S-aiO" secondAttribute="height" multiplier="1:1" id="SiK-LS-kUP"/>
-                                    <constraint firstAttribute="width" constant="100" id="lqh-p6-fGc"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Releases and trending books " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dl-uw-D0q">
+                                <rect key="frame" x="80" y="634" width="489" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rbh-h3-eDf"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zAc-RJ-aw6" firstAttribute="top" secondItem="Oo6-ab-TCE" secondAttribute="top" constant="60" id="4i2-fU-Oy0"/>
                             <constraint firstItem="6aK-7a-uP3" firstAttribute="leading" secondItem="Oo6-ab-TCE" secondAttribute="leading" constant="80" id="BG2-Kc-LRq"/>
@@ -126,9 +138,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bookImage" destination="zAc-RJ-aw6" id="2XZ-iJ-Bfn"/>
-                        <outlet property="booksCollectionView" destination="4d5-g1-d8K" id="cbE-Yt-iIt"/>
-                        <outlet property="newsCollectionView" destination="6aK-7a-uP3" id="jkQ-qc-lUs"/>
+                        <outlet property="booksCollectionView" destination="4d5-g1-d8K" id="hrV-jD-jCF"/>
+                        <outlet property="newsCollectionView" destination="6aK-7a-uP3" id="PVQ-it-DdV"/>
                         <outlet property="profileImage" destination="aCg-3S-aiO" id="dqd-NB-Ahp"/>
                     </connections>
                 </viewController>
@@ -137,4 +148,7 @@
             <point key="canvasLocation" x="314" y="-137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="100"/>
+    </resources>
 </document>
