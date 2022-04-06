@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgj-up-wSf">
     <device id="appleTV" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -108,24 +108,26 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VlD-nr-g2K">
-                                <rect key="frame" x="576" y="759" width="1300" height="109"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VlD-nr-g2K">
+                                <rect key="frame" x="596" y="774" width="1300" height="109"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AwS-yD-4ia">
                                         <rect key="frame" x="0.0" y="0.0" width="500" height="109"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-eK-cMk">
-                                                <rect key="frame" x="24" y="21" width="192" height="86"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-eK-cMk">
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="109"/>
                                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="dynamic">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hvw-eK-cMk" secondAttribute="bottom" id="5tC-43-gRp"/>
+                                            <constraint firstItem="hvw-eK-cMk" firstAttribute="leading" secondItem="AwS-yD-4ia" secondAttribute="leading" id="gx2-PH-kOk"/>
+                                            <constraint firstAttribute="trailing" secondItem="hvw-eK-cMk" secondAttribute="trailing" id="kjc-T8-YYV"/>
+                                            <constraint firstItem="hvw-eK-cMk" firstAttribute="top" secondItem="AwS-yD-4ia" secondAttribute="top" id="sA9-cp-NkV"/>
                                             <constraint firstAttribute="width" constant="500" id="vyS-RZ-c3Y"/>
                                             <constraint firstAttribute="height" constant="109" id="w5i-SG-vN5"/>
                                         </constraints>
@@ -133,36 +135,42 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDQ-W4-xPm">
                                         <rect key="frame" x="550" y="0.0" width="350" height="109"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miB-kx-VBd">
-                                                <rect key="frame" x="24" y="21" width="192" height="86"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miB-kx-VBd">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="109"/>
                                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="fixed">
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="miB-kx-VBd" firstAttribute="top" secondItem="ZDQ-W4-xPm" secondAttribute="top" id="4rV-sC-7HY"/>
+                                            <constraint firstAttribute="trailing" secondItem="miB-kx-VBd" secondAttribute="trailing" id="QBr-ar-D0O"/>
                                             <constraint firstAttribute="height" constant="109" id="Vsb-l8-HED"/>
+                                            <constraint firstAttribute="bottom" secondItem="miB-kx-VBd" secondAttribute="bottom" id="Yor-6o-q8Y"/>
+                                            <constraint firstItem="miB-kx-VBd" firstAttribute="leading" secondItem="ZDQ-W4-xPm" secondAttribute="leading" id="hgV-sE-umw"/>
                                             <constraint firstAttribute="width" constant="350" id="zts-Du-lPg"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-6S-Ztc">
                                         <rect key="frame" x="950" y="0.0" width="350" height="109"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJQ-Dx-8bx">
-                                                <rect key="frame" x="24" y="21" width="192" height="86"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJQ-Dx-8bx">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="109"/>
                                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="capsule">
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="HJQ-Dx-8bx" firstAttribute="leading" secondItem="m6e-6S-Ztc" secondAttribute="leading" id="TbQ-JN-1pl"/>
+                                            <constraint firstAttribute="bottom" secondItem="HJQ-Dx-8bx" secondAttribute="bottom" id="Yr9-NO-uCA"/>
+                                            <constraint firstAttribute="trailing" secondItem="HJQ-Dx-8bx" secondAttribute="trailing" id="bJn-in-J1s"/>
                                             <constraint firstAttribute="width" constant="350" id="lyA-rx-4M5"/>
+                                            <constraint firstItem="HJQ-Dx-8bx" firstAttribute="top" secondItem="m6e-6S-Ztc" secondAttribute="top" id="ngQ-ad-EcL"/>
                                             <constraint firstAttribute="height" constant="109" id="uYV-sn-nmR"/>
                                         </constraints>
                                     </view>
@@ -184,14 +192,16 @@
                             <constraint firstItem="xCL-I0-7x0" firstAttribute="top" secondItem="7Kj-IF-baZ" secondAttribute="bottom" constant="23" id="bjX-6U-5GY"/>
                             <constraint firstAttribute="trailing" secondItem="xCL-I0-7x0" secondAttribute="trailing" constant="80" id="eGE-HD-Q8E"/>
                             <constraint firstAttribute="trailing" secondItem="Adc-kX-H0F" secondAttribute="trailing" constant="80" id="fu0-pw-pey"/>
+                            <constraint firstItem="VlD-nr-g2K" firstAttribute="leading" secondItem="hGR-fI-Trf" secondAttribute="trailing" constant="56" id="qtD-p7-Yk8"/>
                             <constraint firstItem="hGR-fI-Trf" firstAttribute="leading" secondItem="Oo6-ab-TCE" secondAttribute="leading" constant="80" id="sbq-Is-qJ5"/>
                             <constraint firstItem="hGR-fI-Trf" firstAttribute="centerY" secondItem="Oo6-ab-TCE" secondAttribute="centerY" id="uyA-lA-SQ0"/>
+                            <constraint firstItem="VlD-nr-g2K" firstAttribute="top" secondItem="Adc-kX-H0F" secondAttribute="bottom" id="va7-Hd-Mhd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="authorLabel" destination="Pgu-eL-ZMv" id="GtU-63-Wb1"/>
                         <outlet property="bookCover" destination="hGR-fI-Trf" id="FQy-NS-fhQ"/>
-                        <outlet property="bookTitle" destination="DHf-QX-16g" id="9Hq-RE-HcN"/>
+                        <outlet property="bookTitleLabel" destination="DHf-QX-16g" id="f8Z-GX-XVW"/>
                         <outlet property="buyBtn" destination="hvw-eK-cMk" id="Nsy-AZ-zAc"/>
                         <outlet property="buyView" destination="AwS-yD-4ia" id="eed-9a-fER"/>
                         <outlet property="descriptionLabel" destination="Adc-kX-H0F" id="j2i-Lk-7Li"/>

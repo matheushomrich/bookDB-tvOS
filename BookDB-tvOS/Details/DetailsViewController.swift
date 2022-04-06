@@ -46,36 +46,34 @@ class DetailsViewController: UIViewController {
     }
     
     func setButtons() {
-        //variaveis temporarias
         let price = "49,90"
-        var isOwned = false
         
-        if isOwned == true {
-            buyBtn.setTitle("Owned", for: .normal)
-            buyView.layer.backgroundColor = UIColor.gray.cgColor
-            buyView.layer.borderColor = UIColor.gray.cgColor
-        } else {
-            buyBtn.layer.cornerRadius = 10
+//        if isOwned == true {
+//            buyBtn.layer.cornerRadius = 50
+//            buyBtn.clipsToBounds = true
+//            buyBtn.setTitle("Owned", for: .normal)
+//            buyBtn.layer.backgroundColor = UIColor.gray.cgColor
+//        } else {
+            buyBtn.layer.cornerRadius = 50
             buyBtn.clipsToBounds = true
             buyBtn.setTitle("Buy | R$\(price)", for: .normal)
-            buyView.layer.backgroundColor = UIColor.orange.cgColor
-            buyView.layer.borderColor = UIColor.orange.cgColor
-            buyView.layer.borderWidth = 10
-        }
+            buyBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
+            buyBtn.layer.borderColor = UIColor.orange.cgColor
+            buyBtn.layer.borderWidth = 5
+//        }
         
-        listBtn.layer.cornerRadius = 10
+        listBtn.layer.cornerRadius = 50
+        listBtn.layer.borderColor = UIColor.orange.cgColor
+        listBtn.layer.borderWidth = 5
         listBtn.clipsToBounds = true
         listBtn.setTitle("Add to list", for: .normal)
-        buyView.layer.backgroundColor = .none
-        buyView.layer.borderColor = UIColor.orange.cgColor
-        buyView.layer.borderWidth = 10
         
-        previewBtn.layer.cornerRadius = 10
+        previewBtn.layer.cornerRadius = 50
+        previewBtn.layer.borderColor = UIColor.orange.cgColor
+        previewBtn.layer.borderWidth = 5
         previewBtn.clipsToBounds = true
         previewBtn.setTitle("Preview", for: .normal)
-        buyView.layer.backgroundColor = .none
-        buyView.layer.borderColor = UIColor.orange.cgColor
-        buyView.layer.borderWidth = 10
+        
     }
 
     /*
