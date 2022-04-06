@@ -11,7 +11,7 @@
         <!--Details View Controller-->
         <scene sceneID="9lE-WX-96o">
             <objects>
-                <viewController id="Xgj-up-wSf" customClass="DetailsViewController" customModule="BookDB_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="Xgj-up-wSf" customClass="DetailsViewController" customModule="BookDB_tvOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aTn-mJ-5lt"/>
                         <viewControllerLayoutGuide type="bottom" id="BrO-eL-FPV"/>
@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="1243" id="M64-1z-0f4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgu-eL-ZMv">
@@ -35,13 +35,13 @@
                                     <constraint firstAttribute="width" constant="1243" id="5a1-LF-PUh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTH-35-afc">
                                 <rect key="frame" x="596" y="408" width="193" height="46"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-fI-Trf">
@@ -54,7 +54,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-I0-7x0">
                                 <rect key="frame" x="1765" y="285" width="75" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-kX-H0F">
@@ -65,7 +65,7 @@
                                 </constraints>
                                 <string key="text">O livro, baseado em mais de quarenta entrevistas com Jobs ao longo de dois anos - e entrevistas com mais de cem familiares, amigos, colegas, adversários e concorrentes -, narra a vida atribulada do empresário extremamente inventivo e de personalidade forte e polêmica, cuja paixão pela perfeição e cuja energia indomável revolucionaram seis grandes indústrias: a computação pessoal, o cinema de animação, a música, a telefonia celular, a computação em tablet e a edição digital. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-IF-baZ">
@@ -170,6 +170,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rbh-h3-eDf"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vTH-35-afc" firstAttribute="leading" secondItem="hGR-fI-Trf" secondAttribute="trailing" constant="56" id="1aP-vU-fHx"/>
                             <constraint firstItem="DHf-QX-16g" firstAttribute="leading" secondItem="hGR-fI-Trf" secondAttribute="trailing" constant="56" id="9Bo-72-CQJ"/>
@@ -191,8 +192,14 @@
                         <outlet property="authorLabel" destination="Pgu-eL-ZMv" id="GtU-63-Wb1"/>
                         <outlet property="bookCover" destination="hGR-fI-Trf" id="FQy-NS-fhQ"/>
                         <outlet property="bookTitle" destination="DHf-QX-16g" id="9Hq-RE-HcN"/>
+                        <outlet property="buyBtn" destination="hvw-eK-cMk" id="Nsy-AZ-zAc"/>
+                        <outlet property="buyView" destination="AwS-yD-4ia" id="eed-9a-fER"/>
                         <outlet property="descriptionLabel" destination="Adc-kX-H0F" id="j2i-Lk-7Li"/>
                         <outlet property="descriptionTitleLabel" destination="vTH-35-afc" id="3u9-p1-m0B"/>
+                        <outlet property="listBtn" destination="miB-kx-VBd" id="Zqd-ph-Tpi"/>
+                        <outlet property="listView" destination="ZDQ-W4-xPm" id="JHR-U4-VfI"/>
+                        <outlet property="previewBtn" destination="HJQ-Dx-8bx" id="pRM-kP-qzY"/>
+                        <outlet property="previewView" destination="m6e-6S-Ztc" id="ReY-bH-rK8"/>
                         <outlet property="reviewLabel" destination="xCL-I0-7x0" id="sUr-8e-wEb"/>
                         <outlet property="star1" destination="N1m-Fe-L7J" id="gbE-fn-o4w"/>
                         <outlet property="star2" destination="jYg-LU-kIP" id="0Qc-yq-Brj"/>
