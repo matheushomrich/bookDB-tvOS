@@ -67,8 +67,6 @@ class LibraryViewController: UIViewController {
         
         focusGuide.isEnabled = !(next is UICollectionViewCell)
         focusGuide.preferredFocusEnvironments = [previous]
-        
-        //        print(#function)
     }
     
 }
@@ -141,7 +139,6 @@ extension LibraryViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected item")
         selectedBook = self.books[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: self)
     }

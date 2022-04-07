@@ -19,8 +19,6 @@ class LibraryCollectionViewCell: UICollectionViewCell {
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
 
-        print(#function)
-
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations {
                 self.addMotionEffect(UIView.motionEffectGroup)
@@ -42,7 +40,6 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     }
 
     private func configureInitialAppearance() {
-        //self.coverImageView.transform = CGAffineTransform(scaleX: .zero, y: .zero)
         coverImageView.layer.cornerRadius = 10
         coverImageView.clipsToBounds = true
         titleLabel.isHidden = true

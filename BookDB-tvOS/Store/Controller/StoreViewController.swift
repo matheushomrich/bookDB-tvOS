@@ -100,7 +100,6 @@ extension StoreViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView != self.topCollectionView {
-            print("Selected item")
             selectedBook = self.books[indexPath.row]
             performSegue(withIdentifier: "toDetail", sender: self)
             

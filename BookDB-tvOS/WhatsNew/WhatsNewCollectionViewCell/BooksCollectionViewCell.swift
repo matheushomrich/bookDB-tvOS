@@ -19,8 +19,6 @@ class BooksCollectionViewCell: UICollectionViewCell {
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
-        print(#function)
-        
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations {
                 self.addMotionEffect(UIView.motionEffectGroup)

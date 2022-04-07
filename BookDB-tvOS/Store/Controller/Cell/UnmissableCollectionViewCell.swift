@@ -17,8 +17,6 @@ class UnmissableCollectionViewCell: UICollectionViewCell {
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
-        print(#function)
-        
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations {
                 self.addMotionEffect(UIView.motionEffectGroup)
@@ -36,6 +34,5 @@ class UnmissableCollectionViewCell: UICollectionViewCell {
     
     private func configureInitialAppearance() {
         bookImageView.layer.cornerRadius = 10
-//        bookImageView.clipsToBounds = true
     }
 }
