@@ -68,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				5C858F2727FCBCB60084DD25 /* Books */,
-				5C858F2427FCBADE0084DD25 /* Extensions */,
+				5C858F2427FCBADE0084DD25 /* Extensions-Guilherme */,
 				5C858F1D27FCB6490084DD25 /* Library */,
 				4EC6BA2C27FB768400BD48AC /* AppDelegate.swift */,
 				4EC6BA2E27FB768400BD48AC /* ViewController.swift */,
@@ -90,12 +90,12 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		5C858F2427FCBADE0084DD25 /* Extensions */ = {
+		5C858F2427FCBADE0084DD25 /* Extensions-Guilherme */ = {
 			isa = PBXGroup;
 			children = (
 				5C858F2527FCBAEF0084DD25 /* UIView + Extensions.swift */,
 			);
-			path = Extensions;
+			path = "Extensions-Guilherme";
 			sourceTree = "<group>";
 		};
 		5C858F2727FCBCB60084DD25 /* Books */ = {
