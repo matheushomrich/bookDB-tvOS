@@ -36,6 +36,6 @@ class UnmissableCollectionViewCell: UICollectionViewCell {
     
     private func configureInitialAppearance() {
         bookImageView.layer.cornerRadius = 10
-        bookImageView.clipsToBounds = true
+//        bookImageView.clipsToBounds = true
     }
 }
