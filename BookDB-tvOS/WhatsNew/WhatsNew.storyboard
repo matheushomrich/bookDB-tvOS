@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Whats New View Controller-->
+        <!--What's New-->
         <scene sceneID="9lE-WX-96o">
             <objects>
                 <viewController id="Xgj-up-wSf" customClass="WhatsNewViewController" customModule="BookDB_tvOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,6 +135,8 @@
                             <constraint firstItem="6aK-7a-uP3" firstAttribute="top" secondItem="zAc-RJ-aw6" secondAttribute="bottom" constant="38" id="uKP-Fw-fKy"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="What's New" id="oTS-kP-oPY"/>
+                    <simulatedTabBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="booksCollectionView" destination="4d5-g1-d8K" id="1D3-N4-DhM"/>
                         <outlet property="newsCollectionView" destination="6aK-7a-uP3" id="KFi-QB-ILi"/>

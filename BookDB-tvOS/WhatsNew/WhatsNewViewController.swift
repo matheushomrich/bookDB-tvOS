@@ -7,12 +7,6 @@
 
 import UIKit
 
-
-struct Book {
-    let image: UIImage
-    let name: String
-}
-
 struct New {
     let name: String
 }
@@ -27,8 +21,6 @@ class WhatsNewViewController: UIViewController {
     let newsIdentifier = "news-cell"
     let booksIdentifier = "book-cell"
     
-    
-    let book1 = Book(image: UIImage(named: "a")!, name: "book")
     let new1 = New(name: "Soon")
     
     var books: [Book] = []
@@ -42,9 +34,6 @@ class WhatsNewViewController: UIViewController {
         setupCollectionViews()
         profileImage.image = UIImage(named: "a")
         profileImage.circleImage()
-        
-        books.append(book1)
-        news.append(new1)
         
         //        view.addLayoutGuide(focusGuide)
         //
@@ -110,7 +99,7 @@ extension WhatsNewViewController: UICollectionViewDataSource {
             
             let book = books[indexPath.row]
             
-            cell.bookImageView.image = UIImage(named: book.name)
+            //cell.bookImageView.image = UIImage(named: book.name)
             
             return cell
         }
@@ -162,19 +151,4 @@ extension WhatsNewViewController: UICollectionViewDelegateFlowLayout {
         
     }
     
-}
-
-struct Collection {
-    let title: String
-}
-
-extension Collection {
-    static var collections: [Collection] {
-        [
-            Collection(title: "Em breve"),
-            Collection(title: "Leia antes de assistir"),
-            Collection(title: "Livros premiados"),
-            Collection(title: "Livros ruins")
-        ]
-    }
 }
