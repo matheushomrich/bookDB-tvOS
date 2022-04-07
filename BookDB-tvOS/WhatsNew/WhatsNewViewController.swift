@@ -21,8 +21,6 @@ struct New {
 class WhatsNewViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
-    
-    @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var newsCollectionView: UICollectionView!
     @IBOutlet weak var booksCollectionView: UICollectionView!
     
@@ -42,7 +40,6 @@ class WhatsNewViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionViews()
-        bookImage.image = UIImage(systemName: "book")
         profileImage.image = UIImage(named: "a")
         profileImage.circleImage()
         
