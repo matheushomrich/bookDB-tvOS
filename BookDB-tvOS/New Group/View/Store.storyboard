@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="257" width="1920" height="1637"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-cp-P8D">
-                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1448"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1445"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mVo-2K-3RQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="440"/>
@@ -92,13 +92,13 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que estamos lendo essa semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1k-fL-FZW">
-                                                <rect key="frame" x="80" y="460" width="1760" height="46"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <rect key="frame" x="80" y="460" width="1760" height="43"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ddg-5p-k2i">
-                                                <rect key="frame" x="0.0" y="516" width="1920" height="408"/>
+                                                <rect key="frame" x="0.0" y="513" width="1920" height="408"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="408" id="da9-aa-qtN"/>
                                                 </constraints>
@@ -136,13 +136,13 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografias imperdíveis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9t-fY-VuM">
-                                                <rect key="frame" x="80" y="944" width="1760" height="46"/>
+                                                <rect key="frame" x="80" y="941" width="1760" height="46"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9vd-3X-Nnu">
-                                                <rect key="frame" x="0.0" y="1000" width="1920" height="408"/>
+                                                <rect key="frame" x="0.0" y="997" width="1920" height="408"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="408" id="PDz-GW-6ks"/>
                                                 </constraints>
