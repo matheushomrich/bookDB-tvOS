@@ -14,6 +14,12 @@
 		4EC6BA3727FB768800BD48AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA3527FB768800BD48AC /* LaunchScreen.storyboard */; };
 		F4AADC1E27FCB6970093D81E /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AADC1D27FCB6970093D81E /* Details.storyboard */; };
 		F4AADC2027FCBA2B0093D81E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AADC1F27FCBA2B0093D81E /* DetailsViewController.swift */; };
+		4EC6BA4327FB7FC800BD48AC /* WhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6BA4227FB7FC800BD48AC /* WhatsNewViewController.swift */; };
+		4EC6BA4527FB7FD400BD48AC /* WhatsNew.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6BA4427FB7FD400BD48AC /* WhatsNew.storyboard */; };
+		4EC6BA4827FCB65100BD48AC /* GenericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6BA4727FCB65100BD48AC /* GenericExtensions.swift */; };
+		4EC6BA4B27FCBCFA00BD48AC /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6BA4A27FCBCFA00BD48AC /* BooksCollectionViewCell.swift */; };
+		4EC6BA4D27FCBF7500BD48AC /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6BA4C27FCBF7500BD48AC /* NewsCollectionViewCell.swift */; };
+		4EC6BA5027FCCEA400BD48AC /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6BA4F27FCCEA400BD48AC /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		4EC6BA3627FB768800BD48AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4AADC1D27FCB6970093D81E /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		F4AADC1F27FCBA2B0093D81E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		4EC6BA4227FB7FC800BD48AC /* WhatsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewViewController.swift; sourceTree = "<group>"; };
+		4EC6BA4427FB7FD400BD48AC /* WhatsNew.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WhatsNew.storyboard; sourceTree = "<group>"; };
+		4EC6BA4727FCB65100BD48AC /* GenericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExtensions.swift; sourceTree = "<group>"; };
+		4EC6BA4A27FCBCFA00BD48AC /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EC6BA4C27FCBF7500BD48AC /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EC6BA4F27FCCEA400BD48AC /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				F4AADC2127FCD31C0093D81E /* Details */,
+				4EC6BA4627FCB63F00BD48AC /* Extensions */,
+				4EC6BA3D27FB7EB200BD48AC /* WhatsNew */,
 				4EC6BA2C27FB768400BD48AC /* AppDelegate.swift */,
 				4EC6BA2E27FB768400BD48AC /* ViewController.swift */,
 				4EC6BA3027FB768400BD48AC /* Main.storyboard */,
@@ -74,6 +88,40 @@
 				F4AADC1F27FCBA2B0093D81E /* DetailsViewController.swift */,
 			);
 			path = Details;
+		4EC6BA3D27FB7EB200BD48AC /* WhatsNew */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6BA4E27FCCE8700BD48AC /* WhatsNewCollectionReusableCell */,
+				4EC6BA4927FCBCD900BD48AC /* WhatsNewCollectionViewCell */,
+				4EC6BA4227FB7FC800BD48AC /* WhatsNewViewController.swift */,
+				4EC6BA4427FB7FD400BD48AC /* WhatsNew.storyboard */,
+			);
+			path = WhatsNew;
+			sourceTree = "<group>";
+		};
+		4EC6BA4627FCB63F00BD48AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6BA4727FCB65100BD48AC /* GenericExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EC6BA4927FCBCD900BD48AC /* WhatsNewCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6BA4A27FCBCFA00BD48AC /* BooksCollectionViewCell.swift */,
+				4EC6BA4C27FCBF7500BD48AC /* NewsCollectionViewCell.swift */,
+			);
+			path = WhatsNewCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4EC6BA4E27FCCE8700BD48AC /* WhatsNewCollectionReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6BA4F27FCCEA400BD48AC /* SectionHeader.swift */,
+			);
+			path = WhatsNewCollectionReusableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +186,7 @@
 				4EC6BA3427FB768800BD48AC /* Assets.xcassets in Resources */,
 				4EC6BA3227FB768400BD48AC /* Main.storyboard in Resources */,
 				F4AADC1E27FCB6970093D81E /* Details.storyboard in Resources */,
+				4EC6BA4527FB7FD400BD48AC /* WhatsNew.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC6BA2F27FB768400BD48AC /* ViewController.swift in Sources */,
+				4EC6BA4D27FCBF7500BD48AC /* NewsCollectionViewCell.swift in Sources */,
+				4EC6BA4327FB7FC800BD48AC /* WhatsNewViewController.swift in Sources */,
+				4EC6BA5027FCCEA400BD48AC /* SectionHeader.swift in Sources */,
 				4EC6BA2D27FB768400BD48AC /* AppDelegate.swift in Sources */,
 				F4AADC2027FCBA2B0093D81E /* DetailsViewController.swift in Sources */,
+				4EC6BA4B27FCBCFA00BD48AC /* BooksCollectionViewCell.swift in Sources */,
+				4EC6BA4827FCB65100BD48AC /* GenericExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +354,7 @@
 				DEVELOPMENT_TEAM = 8JAU65C453;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = WhatsNew;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -326,7 +380,7 @@
 				DEVELOPMENT_TEAM = 8JAU65C453;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = WhatsNew;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
