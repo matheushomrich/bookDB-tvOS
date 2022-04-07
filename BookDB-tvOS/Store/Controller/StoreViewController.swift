@@ -25,6 +25,9 @@ class StoreViewController: UIViewController {
         setupBooks()
         
         view.addLayoutGuide(focusGuide)
+        
+        booksIcon.layer.cornerRadius = 20
+        profileImageView.layer.cornerRadius = 40
     }
     
     private func setupBooks() {

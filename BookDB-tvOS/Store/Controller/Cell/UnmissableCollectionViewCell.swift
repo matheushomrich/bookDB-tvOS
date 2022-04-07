@@ -22,7 +22,7 @@ class UnmissableCollectionViewCell: UICollectionViewCell {
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations {
                 self.addMotionEffect(UIView.motionEffectGroup)
-                self.transform = CGAffineTransform(scaleX: 1.01, y: 1.1)
+                self.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             }
         }
         

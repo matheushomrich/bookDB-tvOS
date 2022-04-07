@@ -112,8 +112,8 @@
 		4EA005DC27FF5BCB00135C06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				4EA005DF27FF5BD700135C06 /* ReadingWeekCollectionViewCell.swift */,
 				4EA005DD27FF5BD700135C06 /* TopCollectionViewCell.swift */,
+				4EA005DF27FF5BD700135C06 /* ReadingWeekCollectionViewCell.swift */,
 				4EA005DE27FF5BD700135C06 /* UnmissableCollectionViewCell.swift */,
 			);
 			path = Cell;
@@ -276,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D360B0627FCB75600460DBC /* Store.storyboard in Resources */,
 				4EC6BA3727FB768800BD48AC /* LaunchScreen.storyboard in Resources */,
 				4EA005FD27FF5EC300135C06 /* LibraryStoryboard.storyboard in Resources */,
 				4EA005EE27FF5CAC00135C06 /* Details.storyboard in Resources */,
