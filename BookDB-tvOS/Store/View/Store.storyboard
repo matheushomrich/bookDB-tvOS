@@ -21,15 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1954"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wnj-ne-ZXy">
-                                <rect key="frame" x="80" y="61" width="90" height="87.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Books Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Wnj-ne-ZXy">
+                                <rect key="frame" x="80" y="60" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="lj3-Bt-m4S"/>
                                     <constraint firstAttribute="width" constant="90" id="nPH-EQ-Tbj"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D2E-0B-t58">
-                                <rect key="frame" x="1755" y="62.5" width="85" height="82"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dharana-profile-pic" translatesAutoresizingMaskIntoConstraints="NO" id="D2E-0B-t58">
+                                <rect key="frame" x="1755" y="61" width="85" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="V4X-p3-vcC"/>
                                     <constraint firstAttribute="width" constant="85" id="l6e-7R-7k4"/>
@@ -39,14 +39,14 @@
                                 <rect key="frame" x="0.0" y="257" width="1920" height="1637"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-cp-P8D">
-                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1445"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1442"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mVo-2K-3RQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="440"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="440" id="yBt-MN-l9x"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HSI-tu-CUR">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="60" minimumInteritemSpacing="10" id="HSI-tu-CUR">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -63,6 +63,10 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jobs" translatesAutoresizingMaskIntoConstraints="NO" id="Ciz-2P-JQL">
                                                                     <rect key="frame" x="0.0" y="0.0" width="562" height="340"/>
                                                                     <color key="backgroundColor" systemColor="tintColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="340" id="3RP-6H-88c"/>
+                                                                        <constraint firstAttribute="width" constant="562" id="Xhl-To-hh9"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-FG-7KP">
                                                                     <rect key="frame" x="50" y="147" width="255" height="46"/>
@@ -70,7 +74,7 @@
                                                                         <constraint firstAttribute="width" constant="255" id="5eb-HI-kD8"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -91,7 +95,7 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que estamos lendo essa semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1k-fL-FZW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This week's readings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1k-fL-FZW">
                                                 <rect key="frame" x="80" y="460" width="1760" height="43"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +106,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="408" id="da9-aa-qtN"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gt3-u5-Qeq">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="40" minimumInteritemSpacing="10" id="Gt3-u5-Qeq">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -116,9 +120,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="308"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jobs" translatesAutoresizingMaskIntoConstraints="NO" id="NXy-io-Zsq">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="Jobs" translatesAutoresizingMaskIntoConstraints="NO" id="NXy-io-Zsq">
                                                                     <rect key="frame" x="0.0" y="0.0" width="204" height="308"/>
                                                                     <color key="backgroundColor" systemColor="tintColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="204" id="gG0-iN-DWO"/>
+                                                                        <constraint firstAttribute="height" constant="308" id="rv7-cy-ted"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -135,18 +143,18 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografias imperdíveis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9t-fY-VuM">
-                                                <rect key="frame" x="80" y="941" width="1760" height="46"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biographies you can't miss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9t-fY-VuM">
+                                                <rect key="frame" x="80" y="941" width="1760" height="43"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9vd-3X-Nnu">
-                                                <rect key="frame" x="0.0" y="997" width="1920" height="408"/>
+                                                <rect key="frame" x="0.0" y="994" width="1920" height="408"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="408" id="PDz-GW-6ks"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OwE-bl-H94">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="40" minimumInteritemSpacing="10" id="OwE-bl-H94">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -160,9 +168,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="308"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jobs" translatesAutoresizingMaskIntoConstraints="NO" id="7Qk-pd-YAA">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jobs" translatesAutoresizingMaskIntoConstraints="NO" id="7Qk-pd-YAA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="204" height="308"/>
                                                                     <color key="backgroundColor" systemColor="tintColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="204" id="EsW-tG-lmP"/>
+                                                                        <constraint firstAttribute="height" constant="308" id="hx0-nI-yzH"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -233,17 +245,28 @@
                         <outlet property="readingWeekCollectionView" destination="ddg-5p-k2i" id="76B-B7-mQk"/>
                         <outlet property="topCollectionView" destination="mVo-2K-3RQ" id="H4X-fB-Fbv"/>
                         <outlet property="unmissableCollectionView" destination="9vd-3X-Nnu" id="9k7-dk-awn"/>
+                        <segue destination="bBD-GQ-Kf7" kind="show" identifier="toDetail" id="jbX-Cy-8f6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uX-ET-Cqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="-5"/>
+            <point key="canvasLocation" x="-792" y="293"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="j7F-w1-Lcd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Details" id="bBD-GQ-Kf7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="A6s-EI-0tt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyF-iu-l0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="293"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Books Logo" width="90" height="90"/>
+        <image name="Dharana-profile-pic" width="85" height="85"/>
         <image name="Jobs" width="1036" height="1554"/>
-        <image name="book.fill" catalog="system" width="128" height="96"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="tintColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,24 +7,17 @@
 
 import UIKit
 
-struct New {
-    let name: String
-}
-
 
 class WhatsNewViewController: UIViewController {
     
+    @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var newsCollectionView: UICollectionView!
     @IBOutlet weak var booksCollectionView: UICollectionView!
     
-    let newsIdentifier = "news-cell"
-    let booksIdentifier = "book-cell"
-    
-    let new1 = New(name: "Soon")
-    
-    var books: [Book] = []
-    var news: [New] = []
+    let collections: [Collection] = Collection.collections
+    let books: [Book] = Book.books
+    var selectedBook: Book? = nil
     
     let focusGuide: UIFocusGuide = UIFocusGuide()
     
@@ -32,23 +25,8 @@ class WhatsNewViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionViews()
-        profileImage.image = UIImage(named: "a")
-        profileImage.circleImage()
-        
-        //        view.addLayoutGuide(focusGuide)
-        //
-        //        NSLayoutConstraint.activate([
-        //            focusGuide.bottomAnchor.constraint(equalTo: newsCollectionView.topAnchor),
-        //            focusGuide.leftAnchor.constraint(equalTo: newsCollectionView.leftAnchor),
-        //            focusGuide.widthAnchor.constraint(equalTo: newsCollectionView.widthAnchor),
-        //            focusGuide.heightAnchor.constraint(equalToConstant: 50),
-        //
-        //            focusGuide.bottomAnchor.constraint(equalTo: booksCollectionView.topAnchor),
-        //            focusGuide.leftAnchor.constraint(equalTo: booksCollectionView.leftAnchor),
-        //            focusGuide.widthAnchor.constraint(equalTo: booksCollectionView.widthAnchor),
-        //            focusGuide.heightAnchor.constraint(equalToConstant: 50)
-        //        ])
-        
+        profileImage.layer.cornerRadius = 40
+        bookImage.layer.cornerRadius = 20
     }
     
     
@@ -76,7 +54,7 @@ extension WhatsNewViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.newsCollectionView {
-            return news.count
+            return collections.count
         } else {
             return books.count
             
@@ -86,68 +64,55 @@ extension WhatsNewViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: newsIdentifier, for: indexPath) as! NewsCollectionViewCell
+        if collectionView == self.newsCollectionView {
+            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "news-cell", for: indexPath) as! NewsCollectionViewCell
             
-            let new = news[indexPath.row]
+            let collection = collections[indexPath.row]
             
-            cell.newsLabel.text = new.name
+            cellA.collectionLabel .text = collection.title
+            cellA.collectionImageView.image = collection.image
             
-            return cell
+            return cellA
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: booksIdentifier, for: indexPath) as! BooksCollectionViewCell
+            let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: "books-cell", for: indexPath) as! BooksCollectionViewCell
             
             let book = books[indexPath.row]
             
-            //cell.bookImageView.image = UIImage(named: book.name)
+            cellB.bookImageView.image = UIImage(named: book.title)
             
-            return cell
+            return cellB
         }
         
     }
     
 }
 
-//extension WhatsNewViewController: UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-//
-//        guard let indexPath = context.nextFocusedIndexPath else { return }
-//
-//        if indexPath.row == 0 {
-//            let news = news[indexPath.row]
-//
-//            UIView.transition(with: backgroundImageView,
-//                              duration: 0.2,
-//                              options: .transitionCrossDissolve) {
-//                self.backgroundImageView.image = UIImage(named: movie.name)
-//            }
-//        } else {
-//            UIView.transition(with: backgroundImageView,
-//                              duration: 0.2,
-//                              options: .transitionCrossDissolve) {
-//                self.backgroundImageView.image = UIImage(named: movie.name)
-//        }
-//
-//
-//    }
-//
-//    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    //        let digitEntry = TVDigitEntryViewController()
-//    //        present(digitEntry, animated: true)
-//    //    }
-//
-//}
+extension WhatsNewViewController: UICollectionViewDelegate {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let LandingVC = segue.destination as? DetailsViewController else { return }
+        LandingVC.book = selectedBook
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.booksCollectionView {
+            print("Selected item")
+            selectedBook = self.books[indexPath.row]
+            performSegue(withIdentifier: "toDetail", sender: self)
+            
+        }
+    }
+    
+}
 
 extension WhatsNewViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.row == 0 {
-            return CGSize(width: 660, height: 400)
+        if collectionView ==  self.newsCollectionView {
+            return CGSize(width: 560, height: 300)
         } else {
             return CGSize(width: 200, height: 300)
         }
-        
         
     }
     

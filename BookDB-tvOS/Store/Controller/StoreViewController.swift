@@ -15,6 +15,8 @@ class StoreViewController: UIViewController {
     @IBOutlet weak var booksIcon: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    var selectedBook: Book? = nil
+    
     let focusGuide: UIFocusGuide = UIFocusGuide()
     
     let collections: [Collection] = Collection.collections
@@ -25,6 +27,9 @@ class StoreViewController: UIViewController {
         setupBooks()
         
         view.addLayoutGuide(focusGuide)
+        
+        booksIcon.layer.cornerRadius = 20
+        profileImageView.layer.cornerRadius = 40
     }
     
     private func setupBooks() {
@@ -61,7 +66,7 @@ extension StoreViewController: UICollectionViewDataSource {
             let collection = collections[indexPath.row]
             
             cellA.collectionLabel.text = collection.title
-            cellA.collectionImageView.image = UIImage(named: collection.title)
+            cellA.collectionImageView.image = collection.image
             
             return cellA
         } else if collectionView == self.readingWeekCollectionView {
@@ -88,11 +93,22 @@ extension StoreViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let digitEntry = TVDigitEntryViewController()
-        present(digitEntry, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let LandingVC = segue.destination as? DetailsViewController else { return }
+        LandingVC.book = selectedBook
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView != self.topCollectionView {
+            print("Selected item")
+            selectedBook = self.books[indexPath.row]
+            performSegue(withIdentifier: "toDetail", sender: self)
+            
+        }
+    }
+    
 }
+
 
 extension StoreViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

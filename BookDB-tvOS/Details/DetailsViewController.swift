@@ -10,6 +10,8 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    var book: Book? = nil
+    
     @IBOutlet weak var bookCover: UIImageView!
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -27,22 +29,38 @@ class DetailsViewController: UIViewController {
     @IBOutlet var buyView: UIView!
     @IBOutlet var listView: UIView!
     @IBOutlet var previewView: UIView!
+    @IBOutlet var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtons()
         setLabels()
+        setBackgroundImage()
         
         
         // Do any additional setup after loading the view.
     }
     
+    func setBackgroundImage() {
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        backgroundImage.addSubview(blurEffectView)
+        
+        backgroundImage.image = UIImage(named: book?.title ?? "")
+        
+    }
+    
     func setLabels() {
-        bookTitleLabel.text = "Steve Jobs"
-        authorLabel.text = "Walter Isaacson"
-        descriptionLabel.text = "O livro, baseado em mais de quarenta entrevistas com Jobs ao longo de dois anos - e entrevistas com mais de cem familiares, amigos, colegas, adversários e concorrentes -, narra a vida atribulada do empresário extremamente inventivo e de personalidade forte e polêmica, cuja paixão pela perfeição e cuja energia indomável revolucionaram seis grandes indústrias: a computação pessoal, o cinema de animação, a música, a telefonia celular, a computação em tablet e a edição digital."
+        
+        bookTitleLabel.text = book?.title
+        
+        authorLabel.text = book?.author
+        descriptionLabel.text = book?.overview
         descriptionTitleLabel.text = "Description"
         reviewLabel.text = "60 Reviews"
+        bookCover.image = UIImage(named: book?.title ?? "")
     }
     
     func setButtons() {

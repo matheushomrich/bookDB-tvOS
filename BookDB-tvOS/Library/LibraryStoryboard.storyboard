@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Books Logo" translatesAutoresizingMaskIntoConstraints="NO" id="B2y-UK-q83">
-                                <rect key="frame" x="60" y="60" width="90" height="90"/>
+                                <rect key="frame" x="80" y="60" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="fsG-dx-Sla"/>
                                     <constraint firstAttribute="height" constant="90" id="smW-tD-rIo"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dharana-profile-pic" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-ue-qLH">
-                                <rect key="frame" x="1775" y="60" width="85" height="85"/>
+                                <rect key="frame" x="1755" y="60" width="85" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="7j0-3H-tEV"/>
                                     <constraint firstAttribute="width" constant="85" id="9kp-pK-NRd"/>
@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-Qo-Q5w">
-                                            <rect key="frame" x="58" y="25" width="92" height="46"/>
+                                            <rect key="frame" x="88" y="25" width="92" height="46"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ydI-Qo-Q5w" firstAttribute="centerY" secondItem="7WL-oD-CMy" secondAttribute="centerY" id="OCX-Xd-lcG"/>
-                                        <constraint firstItem="ydI-Qo-Q5w" firstAttribute="leading" secondItem="7WL-oD-CMy" secondAttribute="leadingMargin" constant="50" id="lj9-U2-R9c"/>
+                                        <constraint firstItem="ydI-Qo-Q5w" firstAttribute="leading" secondItem="7WL-oD-CMy" secondAttribute="leadingMargin" constant="80" id="lj9-U2-R9c"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="sectionTitleLabel" destination="ydI-Qo-Q5w" id="Dii-MC-TRo"/>
@@ -103,25 +103,36 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rbh-h3-eDf"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tPn-ue-qLH" secondAttribute="trailing" constant="60" id="0by-xB-TNx"/>
+                            <constraint firstAttribute="trailing" secondItem="tPn-ue-qLH" secondAttribute="trailing" constant="80" id="0by-xB-TNx"/>
                             <constraint firstItem="TtW-XS-EL1" firstAttribute="leading" secondItem="Oo6-ab-TCE" secondAttribute="leading" id="0jD-Gz-3DA"/>
                             <constraint firstAttribute="bottom" secondItem="TtW-XS-EL1" secondAttribute="bottom" id="5Rz-NW-gyk"/>
                             <constraint firstItem="B2y-UK-q83" firstAttribute="top" secondItem="Oo6-ab-TCE" secondAttribute="top" constant="60" id="5it-yb-R8w"/>
                             <constraint firstItem="TtW-XS-EL1" firstAttribute="top" secondItem="B2y-UK-q83" secondAttribute="bottom" constant="25" id="IvL-C4-Adp"/>
                             <constraint firstItem="tPn-ue-qLH" firstAttribute="top" secondItem="Oo6-ab-TCE" secondAttribute="top" constant="60" id="THt-gU-Dfh"/>
                             <constraint firstAttribute="trailing" secondItem="TtW-XS-EL1" secondAttribute="trailing" id="V07-bB-e7Q"/>
-                            <constraint firstItem="B2y-UK-q83" firstAttribute="leading" secondItem="Oo6-ab-TCE" secondAttribute="leading" constant="60" id="y2M-Or-S9F"/>
+                            <constraint firstItem="B2y-UK-q83" firstAttribute="leading" secondItem="Oo6-ab-TCE" secondAttribute="leading" constant="80" id="y2M-Or-S9F"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="booksLogoImageView" destination="B2y-UK-q83" id="v5i-ok-O3F"/>
                         <outlet property="libraryCollectionView" destination="TtW-XS-EL1" id="Ss1-AQ-jMq"/>
                         <outlet property="profileImageView" destination="tPn-ue-qLH" id="8ee-o6-BtN"/>
+                        <segue destination="aYY-D1-NCf" kind="show" identifier="toDetail" id="2Pc-05-kUQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uX-ET-Cqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32" y="-5"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="kQs-Xg-UKd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Details" id="aYY-D1-NCf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5za-b7-8ag"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeb-Xt-8hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="791"/>
         </scene>
     </scenes>
     <resources>

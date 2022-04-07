@@ -1,8 +1,8 @@
 //
-//  BooksCollectionViewCell.swift
+//  ReadingWeekCollectionViewCell.swift
 //  BookDB-tvOS
 //
-//  Created by Matheus Homrich on 05/04/22.
+//  Created by Nicolas Godoy on 06/04/22.
 //
 
 import UIKit
@@ -14,6 +14,7 @@ class BooksCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureInitialAppearance()
+        
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
@@ -33,13 +34,10 @@ class BooksCollectionViewCell: UICollectionViewCell {
                 self.transform = .identity
             }
         }
-        
     }
     
     private func configureInitialAppearance() {
         bookImageView.layer.cornerRadius = 10
         bookImageView.clipsToBounds = true
     }
-
-    
 }

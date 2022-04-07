@@ -11,5 +11,5 @@ class LibraryHeaderView: UICollectionReusableView {
         
     @IBOutlet weak var sectionTitleLabel: UILabel!
 
-    let sectionsTitles: [String] = ["Lendo agora", "Próximas leituras", "Lidos", "Quero ler"]
+    let sectionsTitles: [String] = ["Now reading", "Next reads", "Finished", "Want to read"]
 }
