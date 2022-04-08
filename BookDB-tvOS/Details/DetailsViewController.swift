@@ -61,37 +61,39 @@ class DetailsViewController: UIViewController {
         descriptionTitleLabel.text = "Description"
         reviewLabel.text = "60 Reviews"
         bookCover.image = UIImage(named: book?.title ?? "")
+        bookCover.layer.cornerRadius = 20
     }
     
     func setButtons() {
-        let price = "49,90"
-        
-//        if isOwned == true {
-//            buyBtn.layer.cornerRadius = 50
-//            buyBtn.clipsToBounds = true
-//            buyBtn.setTitle("Owned", for: .normal)
-//            buyBtn.layer.backgroundColor = UIColor.gray.cgColor
+//        if book?.isOwned == true {
+//
 //        } else {
-            buyBtn.layer.cornerRadius = 50
-            buyBtn.clipsToBounds = true
-            buyBtn.setTitle("Buy | R$\(price)", for: .normal)
-            buyBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
-            buyBtn.layer.borderColor = UIColor.orange.cgColor
-            buyBtn.layer.borderWidth = 5
-//        }
+//    }
+        buyBtn.layer.cornerRadius = 50
+        buyBtn.clipsToBounds = true
+        buyBtn.layer.borderColor = UIColor(named: "Color")?.cgColor
+        buyBtn.layer.borderWidth = 5
+        buyBtn.setTitle("Buy | R$\(book?.price ?? 49.90)", for: .normal)
+        buyBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
+        buyBtn.tintColor = UIColor(named: "Color")
         
         listBtn.layer.cornerRadius = 50
-        listBtn.layer.borderColor = UIColor.orange.cgColor
-        listBtn.layer.borderWidth = 5
         listBtn.clipsToBounds = true
+        listBtn.layer.borderColor = UIColor(named: "Color")?.cgColor
+        listBtn.layer.borderWidth = 5
         listBtn.setTitle("Add to list", for: .normal)
+        listBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
+        listBtn.tintColor = UIColor(named: "Color")
         
         previewBtn.layer.cornerRadius = 50
-        previewBtn.layer.borderColor = UIColor.orange.cgColor
-        previewBtn.layer.borderWidth = 5
         previewBtn.clipsToBounds = true
+        previewBtn.layer.borderColor = UIColor(named: "Color")?.cgColor
+        previewBtn.layer.borderWidth = 5
         previewBtn.setTitle("Preview", for: .normal)
+        previewBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
+        previewBtn.tintColor = UIColor(named: "Color")
         
+        //        }
     }
-
+    
 }
