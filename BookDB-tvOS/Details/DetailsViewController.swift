@@ -65,7 +65,7 @@ class DetailsViewController: UIViewController {
     }
     
     func setButtons() {
-        var buyTitle = "Owned"
+        let buyTitle = "Owned"
         
         if book?.isOwned == true {
             buyBtn.setTitle(buyTitle, for: .normal)
