@@ -65,15 +65,19 @@ class DetailsViewController: UIViewController {
     }
     
     func setButtons() {
-//        if book?.isOwned == true {
-//
-//        } else {
-//    }
+        var buyTitle = "Owned"
+        
+        if book?.isOwned == true {
+            buyBtn.setTitle(buyTitle, for: .normal)
+            
+        } else {
+            buyBtn.setTitle("Buy | R$\(book?.price ?? 49.90)", for: .normal)
+    }
+        
         buyBtn.layer.cornerRadius = 50
         buyBtn.clipsToBounds = true
         buyBtn.layer.borderColor = UIColor(named: "Color")?.cgColor
         buyBtn.layer.borderWidth = 5
-        buyBtn.setTitle("Buy | R$\(book?.price ?? 49.90)", for: .normal)
         buyBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
         buyBtn.tintColor = UIColor(named: "Color")
         
@@ -93,7 +97,6 @@ class DetailsViewController: UIViewController {
         previewBtn.titleLabel?.font = UIFont(name: "SFProText-Bold", size: 10)
         previewBtn.tintColor = UIColor(named: "Color")
         
-        //        }
     }
     
 }
