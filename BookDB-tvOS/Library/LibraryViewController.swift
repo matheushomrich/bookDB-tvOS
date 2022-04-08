@@ -19,7 +19,7 @@ class LibraryViewController: UIViewController {
     
     let focusGuide: UIFocusGuide = UIFocusGuide()
     
-    let books: [Book] = Book.books
+    var books: [Book] = Book.books
     
     var selectedBook: Book? = nil
     
@@ -78,14 +78,17 @@ extension LibraryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! LibraryCollectionViewCell
-            
-            let book = books[indexPath.row]
+
+            var reversedBooks: [Book] = books.reversed()
+            reversedBooks.removeFirst()
+            reversedBooks.removeFirst()
+            let book = reversedBooks[indexPath.row]
             
             cell.coverImageView.image = UIImage(named: book.title)
             cell.titleLabel.text = book.title

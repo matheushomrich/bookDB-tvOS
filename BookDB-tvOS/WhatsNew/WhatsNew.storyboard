@@ -96,7 +96,7 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z5R-Pg-kgA">
-                                <rect key="frame" x="0.0" y="710" width="1840" height="370"/>
+                                <rect key="frame" x="0.0" y="710" width="1920" height="370"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="R2k-qi-6Sn"/>
                                 </constraints>
@@ -150,7 +150,7 @@
                             <constraint firstItem="rqv-Fh-Emg" firstAttribute="leading" secondItem="qAF-he-9gl" secondAttribute="leading" constant="80" id="mov-bo-BpM"/>
                             <constraint firstAttribute="trailing" secondItem="lL5-GI-gkg" secondAttribute="trailing" id="q7V-iL-4Uj"/>
                             <constraint firstItem="OVp-5i-s4h" firstAttribute="top" secondItem="lL5-GI-gkg" secondAttribute="bottom" constant="10" id="rrC-l6-87q"/>
-                            <constraint firstAttribute="trailing" secondItem="Z5R-Pg-kgA" secondAttribute="trailing" constant="80" id="tcZ-AO-MN2"/>
+                            <constraint firstAttribute="trailing" secondItem="Z5R-Pg-kgA" secondAttribute="trailing" id="tcZ-AO-MN2"/>
                             <constraint firstItem="lL5-GI-gkg" firstAttribute="leading" secondItem="qAF-he-9gl" secondAttribute="leading" id="u2t-Gx-zNN"/>
                             <constraint firstItem="Vkx-vQ-ND5" firstAttribute="top" secondItem="qAF-he-9gl" secondAttribute="top" constant="60" id="xFB-b2-BoX"/>
                         </constraints>

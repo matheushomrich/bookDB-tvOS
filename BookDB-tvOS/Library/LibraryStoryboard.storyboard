@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgj-up-wSf">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgj-up-wSf">
     <device id="appleTV" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-Qo-Q5w">
-                                            <rect key="frame" x="88" y="25" width="92" height="46"/>
+                                            <rect key="frame" x="68" y="25" width="92" height="46"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ydI-Qo-Q5w" firstAttribute="centerY" secondItem="7WL-oD-CMy" secondAttribute="centerY" id="OCX-Xd-lcG"/>
-                                        <constraint firstItem="ydI-Qo-Q5w" firstAttribute="leading" secondItem="7WL-oD-CMy" secondAttribute="leadingMargin" constant="80" id="lj9-U2-R9c"/>
+                                        <constraint firstItem="ydI-Qo-Q5w" firstAttribute="leading" secondItem="7WL-oD-CMy" secondAttribute="leadingMargin" constant="60" id="lj9-U2-R9c"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="sectionTitleLabel" destination="ydI-Qo-Q5w" id="Dii-MC-TRo"/>
